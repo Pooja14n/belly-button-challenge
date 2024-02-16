@@ -41,7 +41,6 @@ function buildMetadata(sample) {
     d3.json(url).then((data) => {
 
         let metadata = data.metadata;
-
         let value = metadata.filter(result => result.id == sample);
 
         console.log(value)
@@ -66,11 +65,8 @@ function buildBarChart(sample) {
     d3.json(url).then((data) => {
 
         let sampleInfo = data.samples;
-
         let value = sampleInfo.filter(result => result.id == sample);
-
         let valueData = value[0];
-
         let otu_ids = valueData.otu_ids;
         let otu_labels = valueData.otu_labels;
         let sample_values = valueData.sample_values;
@@ -103,11 +99,8 @@ function buildBubbleChart(sample) {
     d3.json(url).then((data) => {
         
         let sampleInfo = data.samples;
-
         let value = sampleInfo.filter(result => result.id == sample);
-
         let valueData = value[0];
-
         let otu_ids = valueData.otu_ids;
         let otu_labels = valueData.otu_labels;
         let sample_values = valueData.sample_values;
