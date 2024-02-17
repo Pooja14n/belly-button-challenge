@@ -11,11 +11,13 @@ The following steps are tp o be completed:
 1. Use the D3 library to read in `samples.json` from the URL `https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json`.
 
 2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+   
   a. Use `sample_values` as the values for the bar chart.
   b. Use `otu_ids` as the labels for the bar chart.
   c. Use `otu_labels` as the hovertext for the chart.
 
 3. Create a bubble chart that displays each sample.
+   
   a. Use `otu_ids` for the x values.
   b. Use `sample_values` for the y values.
   c. Use `sample_values` for the marker size.
