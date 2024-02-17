@@ -31,4 +31,11 @@ The following steps are tp o be completed:
 
 7. Deploy the app to a free static page hosting service, such as GitHub Pages. Link to GitHub Page Deployment: https://pooja14n.github.io/belly-button-challenge/
 
+# References
+Referred to various class activity exercises, got support from Assistant Instructor, and websites: https://developer.mozilla.org/, https://d3js.org/.
 
+# Files submitted including this README File
+1. belly-button-challenge Folder
+   a. static Folder -> app.js (contains the script for building the Dashboard)
+   b. index.html
+   c. samples.json
