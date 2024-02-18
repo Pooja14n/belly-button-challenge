@@ -23,20 +23,20 @@ function init() {
             .property("value",id)
         });
         
-        let sample_one = names[0]
+        let sample_data = names[0]
         
-        console.log(sample_one)
+        console.log(sample_data)
        
-        buildMetadata(sample_one)
-        buildBarChart(sample_one)
-        buildBubbleChart(sample_one)
-        buildGaugeChart(sample_one)
+        Metadata(sample_data)
+        BarChart(sample_data)
+        BubbleChart(sample_data)
+        GaugeChart(sample_data)
 
     })
 }
 
 
-function buildMetadata(sample) {
+function Metadata(sample) {
     
     d3.json(url).then((data) => {
 
@@ -56,16 +56,15 @@ function buildMetadata(sample) {
             d3.select("#sample-metadata").append("h5").text(`${key}: ${value}`)
         })
     })
-
 }
 
 
-function buildBarChart(sample) {
+function BarChart(sample) {
 
     d3.json(url).then((data) => {
 
-        let sampleInfo = data.samples
-        let value = sampleInfo.filter(result => result.id == sample)
+        let sampleData = data.samples
+        let value = sampleData.filter(result => result.id == sample)
         let valueData = value[0]
         let otu_ids = valueData.otu_ids
         let otu_labels = valueData.otu_labels
@@ -94,12 +93,12 @@ function buildBarChart(sample) {
 }
 
 
-function buildBubbleChart(sample) {
+function BubbleChart(sample) {
 
     d3.json(url).then((data) => {
         
-        let sampleInfo = data.samples;
-        let value = sampleInfo.filter(result => result.id == sample)
+        let sampleData = data.samples;
+        let value = sampleData.filter(result => result.id == sample)
         let valueData = value[0]
         let otu_ids = valueData.otu_ids
         let otu_labels = valueData.otu_labels
@@ -129,14 +128,14 @@ function buildBubbleChart(sample) {
 }
 
 
-function optionChanged(value) { 
+function scrollOptions(value) { 
 
     console.log(value)
 
-    buildMetadata(value)
-    buildBarChart(value)
-    buildBubbleChart(value)
-    buildGaugeChart(value)
+    Metadata(value)
+    BarChart(value)
+    BubbleChart(value)
+    GaugeChart(value)
 }
 
 init()
